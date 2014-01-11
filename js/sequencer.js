@@ -1,15 +1,20 @@
 //---- GENERAL INFO regarding MIDI playing:
 	// delay - play one note every quarter second
-	//	note - the MIDI note
+	// note - the MIDI note
 	// velocity - how hard the note hits
 //---- END OF GENERAL INFO -------------
 
 //---- PLAYER/SEQUENCER ---------------
-//loads the soundfont
+//loads the soundfont, then displays the play button
+
 window.onload = function () {
 	MIDI.loadPlugin({
 		soundfontUrl: "./soundfont/",
-		instrument: "acoustic_grand_piano"});	
+		instrument: "acoustic_grand_piano",
+		callback: function() {
+			document.getElementById("main").innerHTML = '<p>Works best in Chrome.</p><input type="button" onclick="playSequence(musicSheet)" value="Play Sound">';
+		}
+	});
 }
 
 //the sequencer function

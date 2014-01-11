@@ -2,6 +2,9 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <link href='http://fonts.googleapis.com/css?family=Inika' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="./css/styles.css" />
+
  <!-- midi.js package -->
  <script src="./js/MIDI/AudioDetect.js" type="text/javascript"></script>
  <script src="./js/MIDI/LoadPlugin.js" type="text/javascript"></script>
@@ -17,8 +20,11 @@
  <script src="./js/sequencer.js" type="text/javascript"></script>
 </head>
 <body>
-<p>Works best in Chrome.</p>
-<input type="button" onclick="playSequence(musicSheet)" value="Play Sound">
-
+	<div id="main">
+		<span class="load">Loading...</span>
+		<div id="bar">
+			<div id="slider"><div id="glower"></div></div>
+		</div>
+	</div>
 </body>
 </html>
